@@ -370,3 +370,92 @@ body {
     box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* blød skygge */
     background-color: #fffbe6; /* lys gul highlight */
 }
+.fade-gallery {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;  /* begrænser bredden på store skærme */
+    height: 550px;       /* højere for bedre proportion */
+    margin: 2rem auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.fade-gallery img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* fylder hele boksen og bevarer proportion */
+    opacity: 0;
+    animation: fade 20s infinite;
+}
+
+.fade-gallery img:nth-child(1) { animation-delay: 0s; }
+.fade-gallery img:nth-child(2) { animation-delay: 5s; }
+.fade-gallery img:nth-child(3) { animation-delay: 10s; }
+.fade-gallery img:nth-child(4) { animation-delay: 15s; }
+
+@keyframes fade {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    25% { opacity: 1; }
+    35% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@media (max-width: 768px) {
+    .fade-gallery {
+        height: 350px; /* mindre på mobil, stadig højere end før */
+    }
+}
+/* HAMBURGER MENU */
+.hamburger {
+    display: none; /* skjult på desktop */
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: white; /* ændret til hvid for kontrast på mørk navbar */
+    border-radius: 2px;
+}
+
+/* NAVBAR MOBILE */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 60px; /* lidt under navbaren */
+        right: 0;
+        background-color: #222;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        flex-direction: column;
+        transition: max-height 0.3s ease;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    .nav-links li {
+        margin: 1rem 0;
+        text-align: center;
+    }
+
+    .nav-links li a {
+        font-size: 1.2rem;
+        color: white;
+    }
+
+    .hamburger {
+        display: flex; /* vis hamburger på mobil */
+    }
+
+    .nav-links.active {
+        max-height: 500px; /* stor nok til alle links */
+        padding: 1rem 0;
+    }
+}
