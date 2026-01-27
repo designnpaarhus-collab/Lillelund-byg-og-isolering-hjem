@@ -24,7 +24,6 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
     padding: 0.5rem 0;
 }
 
@@ -455,5 +454,16 @@ body {
 
     .nav-links a {
         font-size: 1.3rem;
+    }
+}
+@media (max-width: 768px) {
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+    }
+
+    body {
+        padding-top: 60px; /* præcis navbarens højde */
     }
 }
