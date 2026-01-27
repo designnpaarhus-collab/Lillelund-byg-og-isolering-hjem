@@ -1,0 +1,372 @@
+/* BODY & GENERELLE STYLES */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.narrow {
+    max-width: 800px;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: #222;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    padding: 0.5rem 0;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #f4a261;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f4a261;
+    text-decoration: underline;
+}
+
+/* HERO HEADER */
+.hero-header {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+}
+
+.hero-text h1 {
+    margin: 0;
+    font-size: 3rem;
+}
+
+.hero-text p {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+/* SERVICES OVERVIEW */
+.services-overview .service-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.services-overview .service-list > div {
+    flex: 1 1 30%;
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #f4a261;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: #e18e48;
+}
+
+/* ANMELDELSER */
+.reviews {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.review {
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+/* KONTAKT */
+.contact-box {
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #333;
+    color: white;
+}
+
+/* RESPONSIV */
+@media (max-width: 768px) {
+    .services-overview .service-list {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    .hero-text p {
+        font-size: 1rem;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.image-gallery img {
+    width: calc(50% - 0.5rem);
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Responsivt */
+@media (max-width: 768px) {
+    .image-gallery img {
+        width: 100%;
+    }
+}
+/* GENERELLE SEKTIONSSTYLES */
+.section {
+    padding: 3rem 0;
+    background-color: #fff;
+}
+
+.section h2 {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #f4a261; /* lille dekorativ linje under overskriften */
+    display: inline-block;
+    padding-bottom: 0.3rem;
+}
+
+.section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    color: #444;
+}
+
+.section ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.section ul li {
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+}
+
+/* IMAGE GALLERY */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.image-gallery img {
+    width: calc(50% - 0.5rem);
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* RESPONSIV GALLERI */
+@media (max-width: 768px) {
+    .image-gallery img {
+        width: 100%;
+    }
+}
+
+/* SPECIFIKT TIL ISOLERING.HTML */
+.hero-header {
+    height: 60vh;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+}
+
+.hero-text p {
+    font-size: 1.3rem;
+}
+.fade-gallery {
+    position: relative;
+    width: 100%;
+    height: 400px; /* kan justeres efter behov */
+    overflow: hidden;
+}
+
+.fade-gallery img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    opacity: 0;
+    animation: fade 25s infinite;
+}
+
+/* Skift billeder med delay */
+.fade-gallery img:nth-child(1) { animation-delay: 0s; }
+.fade-gallery img:nth-child(2) { animation-delay: 5s; }
+.fade-gallery img:nth-child(3) { animation-delay: 10s; }
+.fade-gallery img:nth-child(4) { animation-delay: 15s; }
+.fade-gallery img:nth-child(5) { animation-delay: 20s; }
+
+/* Fade animation */
+@keyframes fade {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    20% { opacity: 1; }
+    30% { opacity: 0; }
+    100% { opacity: 0; }
+}
+.fade-gallery {
+    position: relative;
+    width: 100%;
+    max-width: 1200px; /* Begrænser bredden, så det ikke bliver for stort på store skærme */
+    height: 500px; /* Gør billederne højere for bedre proportion */
+    margin: 1.5rem auto;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.fade-gallery img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Bevarer billedets proportion og fylder hele boxen */
+    opacity: 0;
+    animation: fade 20s infinite;
+}
+
+/* Delay for hvert billede */
+.fade-gallery img:nth-child(1) { animation-delay: 0s; }
+.fade-gallery img:nth-child(2) { animation-delay: 5s; }
+.fade-gallery img:nth-child(3) { animation-delay: 10s; }
+.fade-gallery img:nth-child(4) { animation-delay: 15s; }
+
+/* Fade animation */
+@keyframes fade {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    25% { opacity: 1; }
+    35% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/* Responsivt for mindre skærme */
+@media (max-width: 768px) {
+    .fade-gallery {
+        height: 300px; /* gør det højere på mobil */
+    }
+}
+/* ANMELDELSER */
+.reviews {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.review {
+    background-color: #f5f5f5;
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease; /* gør hover glidende */
+    cursor: default;
+}
+
+/* Hover-effekt */
+.review:hover {
+    transform: translateY(-5px); /* løfter boksen lidt */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* skygge ved hover */
+    background-color: #fffbe6; /* lidt lys gul baggrund for highlight */
+}
+/* SERVICES OVERVIEW HOVER */
+.services-overview .service-list > div {
+    background-color: #f5f5f5;
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: all 0.3s ease; /* glidende hover */
+    cursor: pointer; /* viser at det er klikbart */
+}
+
+/* Hover-effekt */
+.services-overview .service-list > div:hover {
+    transform: translateY(-5px); /* løfter boksen */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* blød skygge */
+    background-color: #fffbe6; /* lys gul highlight */
+}
