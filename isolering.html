@@ -12,7 +12,15 @@
 <nav class="navbar">
     <div class="container">
         <div class="logo"><a href="index.html">Lillelund Byg & Isolering</a></div>
-        <ul class="nav-links">
+        
+        <!-- Hamburger icon -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <ul class="nav-links" id="nav-links">
             <li><a href="index.html">Hjem</a></li>
             <li><a href="isolering.html">Isolering</a></li>
             <li><a href="byggeopgaver.html">Byggeopgaver</a></li>
@@ -22,6 +30,7 @@
         </ul>
     </div>
 </nav>
+
 
 <!-- HERO HEADER -->
 <header class="hero-header">
@@ -81,6 +90,14 @@
 <footer class="footer">
     <p>© Lillelund Byg & Isolering</p>
 </footer>
+<script>
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
+</script>
 
 </body>
 </html>
