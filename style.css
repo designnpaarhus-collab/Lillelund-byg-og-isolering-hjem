@@ -1,3 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
 /* BODY & GENERELLE STYLES */
 body {
     margin: 0;
@@ -466,4 +476,19 @@ body {
     body {
         padding-top: 60px; /* præcis navbarens højde */
     }
+}
+.logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.logo .white {
+    color: #ffffff;
+}
+
+.logo .green {
+    color: #4CAF50; /* kan justeres til din grønne farve */
 }
