@@ -492,3 +492,16 @@ body {
 .logo .green {
     color: #4CAF50; /* kan justeres til din grønne farve */
 }
+/* FIX: Mobil navbar højde og mellemrum */
+@media (max-width: 768px) {
+    .navbar {
+        height: 64px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+    }
+
+    body {
+        padding-top: 64px;
+    }
+}
