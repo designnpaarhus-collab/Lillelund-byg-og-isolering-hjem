@@ -7,6 +7,25 @@
     <!-- Sørg for at style.css ligger i samme mappe som index.html -->
     <link rel="stylesheet" href="style.css">
 </head>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const elements = document.querySelectorAll(".fade-in, .fade-in-slow");
+
+    elements.forEach((el, index) => {
+        setTimeout(() => {
+            el.classList.add("show");
+        }, index * 120); // lille delay mellem elementer
+    });
+});
+</script>
+<div id="cookie-banner">
+  <p>
+    Vi bruger kun nødvendige cookies for at sikre, at hjemmesiden fungerer korrekt.
+    <a href="privatlivspolitik.html">Læs mere</a>
+  </p>
+  <button id="accept-cookies">OK</button>
+</div>
+
 <body>
 
 <!-- NAVBAR -->
@@ -105,6 +124,7 @@
             <p><strong>Telefon:</strong> 31 38 65 09</p>
             <p><strong>Email:</strong> lillelund@lillelund-byg.dk</p>
             <p><strong>CVR:</strong> 38 66 33 64</p>
+            <p><strong>Addresse:</strong> Rybjergvej 79. 7870 Roslev</p>
         </div>
     </div>
 </section>
