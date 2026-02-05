@@ -557,3 +557,68 @@ body {
     cursor: pointer;
     font-weight: bold;
 }
+/* ===== PRIVATLIVSPOLITIK ===== */
+.privacy-wrapper {
+    max-width: 800px;
+    margin: 4rem auto;
+    padding: 2.5rem;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.privacy-wrapper h1 {
+    font-size: 2.4rem;
+    margin-bottom: 1.5rem;
+    color: #222;
+    border-bottom: 3px solid #32c143;
+    display: inline-block;
+    padding-bottom: 0.4rem;
+}
+
+.privacy-wrapper h2 {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    color: #222;
+}
+
+.privacy-wrapper p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 1rem;
+}
+
+.privacy-wrapper ul {
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.privacy-wrapper ul li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Links */
+.privacy-wrapper a {
+    color: #32c143;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.privacy-wrapper a:hover {
+    text-decoration: underline;
+}
+
+/* Mobil */
+@media (max-width: 768px) {
+    .privacy-wrapper {
+        margin: 2rem 1rem;
+        padding: 1.5rem;
+    }
+
+    .privacy-wrapper h1 {
+        font-size: 2rem;
+    }
+}
