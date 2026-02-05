@@ -149,6 +149,23 @@ navItems.forEach(link => {
     });
 });
 </script>
+<script>
+window.addEventListener("load", function () {
+    const banner = document.getElementById("cookie-banner");
+    const button = document.getElementById("accept-cookies");
+
+    if (!banner || !button) return;
+
+    if (localStorage.getItem("cookiesAccepted") === "true") {
+        banner.style.display = "none";
+    }
+
+    button.addEventListener("click", function () {
+        localStorage.setItem("cookiesAccepted", "true");
+        banner.style.display = "none";
+    });
+});
+</script>
 
 </body>
 </html>
